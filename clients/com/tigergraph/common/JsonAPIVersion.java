@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 /**
  * Represent the api version of response that is returned to end-user
+ * It is extracted from Query text in 
+ * AliasNormalizer.java: exitApiClause(), and set into commonVariable.JsonAPI.
  */
 public enum JsonAPIVersion {
   //add the version here if json format is changed each time
@@ -13,7 +15,7 @@ public enum JsonAPIVersion {
   UNKNOWN("unknown");
 
   private String version;
-  static private JsonAPIVersion defaultVersion = V2;
+  static public JsonAPIVersion defaultVersion = V2;
 
   private JsonAPIVersion(String version) {
     this.version = version;
